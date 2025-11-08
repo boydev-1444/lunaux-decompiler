@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.png" alt="LunaUX-Decompiler & Disassembler banner" width="500px" height=auto>
+  <img src="./assets/banner.jpg" alt="LunaUX-Decompiler & Disassembler banner" width="500px" height=auto>
 </p>
 <h1 align="center">LunaUX-Decompiler & Disassembler</h1>
 
