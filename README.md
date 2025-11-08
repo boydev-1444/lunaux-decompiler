@@ -19,7 +19,7 @@
 ### Loadstring
 ```lua
 local SETTINGS = {
-	URL = "https://raw.githubusercontent.com/boydev-1444/lunaux-decompiler/main/",
+	URL = "https://raw.githubusercontent.com/boydev-1444/lunaux-decompiler/refs/heads/main/",
 	PRINT_FUNCTIONS = false,
 	FILE = "init"
 }
