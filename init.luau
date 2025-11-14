@@ -11,9 +11,9 @@ type DecompilerOptions = {
 	UpvaluePrefix : string?,
 	VariablePrefix : string?,
 }
+
 local API_URL = "https://lunaux-decompiler.railway.com"
 local Options : DecompilerOptions = {}
-
 --TODO: NO-EXPLOIT SETTINGS
 -- This is an example, if you're executing this script in the server, don't edit it (IT ALWAYS NEEDS TO BE A REMOTE FUNCTION OR BINDABLE FUNCTION)
 -- If there is the RemoteFunction in the path you must add a server listener to the RemoteFunction
