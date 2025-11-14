@@ -145,7 +145,6 @@ else
 					for part in string.gmatch(HTTP_REMOTE_FUNCTION_PATH, "[^.]+") do
 						pathParts[#pathParts + 1] = part
 					end
-
 					for i = 1, #pathParts do
 						obj = obj:FindFirstChild(pathParts[i])
 						assert(obj , string_format("Instance `%s` was nil at position %d", pathParts[i] , i))
