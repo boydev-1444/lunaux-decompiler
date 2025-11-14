@@ -85,7 +85,6 @@ if env then
 	})
 else
 	global_container = global_container or {}
-
 	if not global_container.base64encode then
 		local base64Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 		local base64Lookup = {}
