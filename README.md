@@ -6,12 +6,7 @@
 - > Luau decompiler & disassembler wrotten in Python V3.13.2 by boydev1444 & zyx
 - Join to our [Discord Server](https://discord.gg/2mJUD4XDDT) to get noticed about updates & support, and more!
 - API Script [here](https://github.com/boydev-1444/lunaux-decompiler/init.luau)
-## Authors
-- zyx
-  - Main idea
-  - Contributor
-- [boydev1444](https://github.com/boydev-1444)
-  - Bring this
+
 
 - Inspirated on Konstant and medal's decompilers, this decompiler was created to bring free perfect decompilation service as medal or konstant (v3)
 - Many thanks also to **plusgiant5** for answering my questions. Without him, We wouldn't be here.
