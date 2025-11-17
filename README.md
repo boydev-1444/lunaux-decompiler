@@ -8,7 +8,7 @@
 - API Script [here](https://github.com/boydev-1444/lunaux-decompiler/init.luau)
 
 
-- Inspirated on Konstant and medal's decompilers, this decompiler was created to bring free perfect decompilation service as medal or konstant (v3)
+- Inspirated on Konstant and medal's decompilers, this decompiler was created to bring free perfect decompilation service as medal or other decompilers.
 - Many thanks also to **plusgiant5** for answering my questions. Without him, We wouldn't be here.
 
 ### Loadstring
