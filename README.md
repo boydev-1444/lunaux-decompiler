@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">LunaUX-Decompiler & Disassembler</h1>
 
-- > Luau decompiler & disassembler wrotten in Python V3.13.2 by boydev1444 & zyx
+- > Luau decompiler & disassembler, originally wrotten in Python V3.13.2 by boydev1444 & zyx
 - Join to our [Discord Server](https://discord.gg/2mJUD4XDDT) to get noticed about updates & support, and more!
 - API Script [here](https://github.com/boydev-1444/lunaux-decompiler/init.luau)
 
