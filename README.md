@@ -123,5 +123,5 @@ g++ CliApp.cpp -o CLI.exe -std=c++20 -O2 -s -lws2_32
 
 - ### Linux
 ```bash
-x86_64-w64-mingw32-g++ cli.cpp -o CLI.exe -std=c++20 -O2 -s -lws2_32
+x86_64-w64-mingw32-g++ CliApp.cpp -o CLI.exe -std=c++20 -O2 -s -lws2_32
 ```
