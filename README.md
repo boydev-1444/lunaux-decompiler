@@ -22,7 +22,7 @@ cd lunaux-decompiler
 run.bat
 ```
 
-- ## Linux
+- ### Linux
 
 ```bash
 git clone https://github.com/boydev-1444/lunaux-decompiler.git 
@@ -31,7 +31,60 @@ chmod +x run.sh
 ./run.sh
 ```
 
-- ## CLI Application
+# API Script
+
+- Paste it into an environment than supports `request`, `base64encode` or `crypt` library and `getscriptbytecode`
+
+```lua
+assert(request, "http request function missing")
+assert(getscriptbytecode, "getscriptbytecode function missing")
+local base64_encoder = (crypt and crypt.base64 and crypt.base64.encode) or base64encode
+assert(base64_encoder, "base64encode function missing")
+local http = game:GetService("HttpService")
+
+local function apiRequest(bytecode, branch, scriptName)
+    local response = request({
+        Url = 'http://127.0.0.1:8000/' .. branch,
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = http:JSONEncode({ bytecode = base64_encoder(bytecode), filename = scriptName })
+    })
+    if response.StatusCode ~= 200 then
+        return `--[[ Server error (HTTP {response.StatusCode}:\n\t{response.Body}\n]]`
+    end
+    return response.Body
+end
+
+if getgenv then 
+  getgenv().decompile = function(scriptPath : BaseScript)
+      local OK, bytecode = pcall(getscriptbytecode, scriptPath)
+      if not OK then return `--[[ Failed to get script bytecode:\n\t{bytecode}\n]]` end
+      return apiRequest(bytecode, "decompile", scriptPath.Name)
+  end
+
+  getgenv().disassemble = function(scriptPath : BaseScript)
+      local OK, bytecode = pcall(getscriptbytecode, scriptPath)
+      if not OK then return `--[[ Failed to get script bytecode:\n\t{bytecode}\n]]` end
+      return apiRequest(bytecode, "disassemble", scriptPath.Name) 
+  end
+end
+```
+
+# API Options
+
+- All decompiling options:
+  - `Semicolons` : Add a semicolon for every line (Default: False)
+  - `StringInterpolation` : Enables string interpolation between strings (Default: True)
+  - `UpvalueComment` :  Every upvalue used in a function (Default: True)
+  - `ShowLineDefined` : Adds the original line defined of the prototype (Default: True)
+  - `ShowFunctionId` : Adds the original function id in the bytecode (`ShowlineDefined` must be enabled; Default : False)
+  - `PreserveForStep` : Keeps the step for the numeric loop including if is one (Default: False)
+  - `UseIfExpression` : Uses `if ... then ... else ...` in assigns, if not enabled uses AND/OR operators (Default: True)
+
+
+# CLI Application
 
 - Tool for fast analysis or other
   - Supports base64 encoded inputs or raw bytecodes
