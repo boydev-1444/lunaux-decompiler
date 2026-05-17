@@ -111,3 +111,17 @@ Commands:
       If an output directory is provided, the result will be saved there;
       otherwise, it will be printed to the console.
 ```
+
+# Compiling CLI by yourself
+
+- The CLI application is already compiled and you can find it in the releases tab.
+
+- ### Windows
+```shell
+g++ CliApp.cpp -o CLI.exe -std=c++20 -O2 -s -lws2_32
+```
+
+- ### Linux
+```bash
+x86_64-w64-mingw32-g++ CliApp.cpp -o CLI.exe -std=c++20 -O2 -s -lws2_32
+```

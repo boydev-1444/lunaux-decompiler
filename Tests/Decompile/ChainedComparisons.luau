@@ -1,6 +1,3 @@
--- [[ Decompiled using LunaUX-Decompiler V1.3. Luau decompiler made by boydev1444 & zyx (https://discord.gg/2mJUD4XDDT) ]]
--- [[ Decompiled on Fri May 15 20:44:41 2026 (UTC -6), took 0.001471 second(s) ]]
-
 local function inRange(v1, v2, v3) --[[ Line: 1 ]]
 	local v4 = false;
 	if v2 <= v1 then
