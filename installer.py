@@ -241,13 +241,14 @@ else:
 
 to_console("Starting local server..", (220, 190, 60), True)
 DEPS = [
-    "uvicorn",
     "fastapi",
+    "uvicorn",
     "pydantic",
     "pytz",
     "numpy",
     "re",
-    "json"
+    "json",
+    "rich"
 ]
 
 if platform_system().lower() == "windows":

@@ -1,0 +1,7 @@
+txt
+fastapi
+uvicorn
+pydantic
+pytz
+numpy
+rich
