@@ -1,5 +1,5 @@
 # LunaUX-Decompiler [![Version](https://img.shields.io/badge/Version-Beta_1.3-8A2BE2.svg)](https://github.com/boydev-1444/lunaux-decompiler/releases/tag/lastest) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-<p align="center"> <img src="https://cdn.discordapp.com/attachments/1365953466622804020/1505053498553663698/Banner.png?ex=6a0939cc&is=6a07e84c&hm=fc7b30959a664c64f0a82c162678b5b8029de9c9ee1f3239cbc34cd328c624e5&" width=1000 > </p>
+<p align="center"> <img src="./Assets/Banner.png" width=1000 > </p>
 
 ## > Discord server [here](https://discord.gg/2mJUD4XDDT)
 
