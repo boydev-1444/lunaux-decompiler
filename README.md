@@ -1,4 +1,4 @@
-# LunaUX-Decompiler [![Version](https://img.shields.io/badge/Version-Beta_1.3-8A2BE2.svg)](https://github.com/boydev-1444/lunaux-decompiler/releases/tag/lastest) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# LunaUX-Decompiler [![Version](https://img.shields.io/badge/Version-V_1.4-8A2BE2.svg)](https://github.com/boydev-1444/lunaux-decompiler/releases/tag/lastest) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 <p align="center"> <img src="./Assets/Banner.png" width=1000 > </p>
 
 ## > Discord server [here](https://discord.gg/2mJUD4XDDT)
