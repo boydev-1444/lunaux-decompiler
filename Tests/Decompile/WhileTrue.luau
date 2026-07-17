@@ -1,3 +1,4 @@
+
 while true do
-	print("Body");
-end;
+	print("Body")
+end

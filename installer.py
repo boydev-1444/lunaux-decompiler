@@ -245,6 +245,7 @@ DEPS = [
     "uvicorn",
     "pydantic",
     "pytz",
+    "requests",
     "numpy",
     "re",
     "json",

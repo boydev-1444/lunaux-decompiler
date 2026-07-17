@@ -1,3 +1,4 @@
+
 # Luau version: 11 (0x000000B)
 # Types version: 3 (0x0000003)
 # Magic key: 1 (0x0000001)
@@ -20,7 +21,7 @@ local function inRange(var0, var1, var2) --[[ Line: 1, Id: 0 ]]
 
 	# BLOCK 0  [ENTRY] (B0) | PC 0 -> 1
 	[00000] [00000] [0x0000003]	    LOADB                          A=3   B=0   C=0          ; var3 = false
-	[00001] [00001] [0x000001F]	    JUMPIFNOTLE [0x0000000]        A=1   D=5                ; if var1 >= var0 then goto [B1] else goto [B2]
+	[00001] [00001] [0x000001F]	    JUMPIFNOTLE [0x0000000]        A=1   D=5                ; if var1 > var0 then goto [B1] else goto [B2]
 
 	# BLOCK 1 (B1) | PC 3 -> 3
 	[00000] [00003] [0x000001C]	    JUMPIFLE [0x0000002]           A=0   D=2                ; if var0 <= var2 then goto [B4] else goto [B3]
@@ -41,13 +42,13 @@ local function clamp(var0, var1, var2) --[[ Line: 1, Id: 1 ]]
 
 
 	# BLOCK 0  [ENTRY] (B0) | PC 0 -> 0
-	[00000] [00000] [0x0000020]	    JUMPIFNOTLT [0x0000001]        A=0   D=2                ; if var0 > var1 then goto [B1] else goto [B2]
+	[00000] [00000] [0x0000020]	    JUMPIFNOTLT [0x0000001]        A=0   D=2                ; if var0 >= var1 then goto [B1] else goto [B2]
 
 	# BLOCK 1 (B1) | PC 2 -> 2
 	[00000] [00002] [0x0000016]	    RETURN                         A=1   B=2                ; return var1
 
 	# BLOCK 2 (B2) | PC 3 -> 3
-	[00000] [00003] [0x0000020]	    JUMPIFNOTLT [0x0000000]        A=2   D=2                ; if var2 > var0 then goto [B3] else goto [B4]
+	[00000] [00003] [0x0000020]	    JUMPIFNOTLT [0x0000000]        A=2   D=2                ; if var2 >= var0 then goto [B3] else goto [B4]
 
 	# BLOCK 3 (B3) | PC 5 -> 5
 	[00000] [00005] [0x0000016]	    RETURN                         A=2   B=2                ; return var2
@@ -63,7 +64,7 @@ local function sign(var0) --[[ Line: 1, Id: 2 ]]
 
 	# BLOCK 0  [ENTRY] (B0) | PC 0 -> 1
 	[00000] [00000] [0x0000004]	    LOADN                          A=2   D=0                ; var2 = 0
-	[00001] [00001] [0x0000020]	    JUMPIFNOTLT [0x0000000]        A=2   D=3                ; if var2 > var0 then goto [B1] else goto [B2]
+	[00001] [00001] [0x0000020]	    JUMPIFNOTLT [0x0000000]        A=2   D=3                ; if var2 >= var0 then goto [B1] else goto [B2]
 
 	# BLOCK 1 (B1) | PC 3 -> 4
 	[00000] [00003] [0x0000004]	    LOADN                          A=1   D=1                ; var1 = 1
@@ -71,7 +72,7 @@ local function sign(var0) --[[ Line: 1, Id: 2 ]]
 
 	# BLOCK 2 (B2) | PC 5 -> 6
 	[00000] [00005] [0x0000004]	    LOADN                          A=2   D=0                ; var2 = 0
-	[00001] [00006] [0x0000020]	    JUMPIFNOTLT [0x0000002]        A=0   D=3                ; if var0 > var2 then goto [B3] else goto [B4]
+	[00001] [00006] [0x0000020]	    JUMPIFNOTLT [0x0000002]        A=0   D=3                ; if var0 >= var2 then goto [B3] else goto [B4]
 
 	# BLOCK 3 (B3) | PC 8 -> 9
 	[00000] [00008] [0x0000004]	    LOADN                          A=1   D=-1               ; var1 = -1

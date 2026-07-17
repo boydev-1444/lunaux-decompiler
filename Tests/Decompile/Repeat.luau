@@ -1,5 +1,6 @@
-print("Before");
+
+print("Before")
 repeat
-	x();
-until condition;
-print("After");
+	x()
+until condition
+print("After")

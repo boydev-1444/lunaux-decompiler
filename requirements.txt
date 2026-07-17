@@ -2,6 +2,7 @@ txt
 fastapi
 uvicorn
 pydantic
+requests
 pytz
 numpy
 rich

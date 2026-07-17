@@ -25,8 +25,8 @@ end
 
 if getgenv then 
   getgenv().decompile = function(scriptPath : BaseScript)
-      if typeof(scriptPath) ~= "Instance" return "-- Invalid argument #1 to 'decompile' (Instance expected)" end
-      if not isValidScript(scriptPath) return "-- Server scripts are IMPOSSIBLE to decompile"
+      if typeof(scriptPath) ~= "Instance" then return "-- Invalid argument #1 to 'decompile' (Instance expected)" end
+      if not isValidScript(scriptPath) then return "-- Server scripts are IMPOSSIBLE to decompile" end
       local OK, bytecode = pcall(getscriptbytecode, scriptPath)
       if not OK then return `--[[ Failed to get script bytecode:\n\t{bytecode}\n]]` end
       if type(bytecode) ~= "string" then return `--[[ Failed to get script bytecode, string type expected got {type(bytecode)} ]]` end
@@ -35,8 +35,8 @@ if getgenv then
   end
 
   getgenv().disassemble = function(scriptPath : BaseScript)
-      if typeof(scriptPath) ~= "Instance" return "-- Invalid argument #1 to 'disassemble' (Instance expected)" end
-      if not isValidScript(scriptPath) return "-- Server scripts are IMPOSSIBLE to disassemble"
+      if typeof(scriptPath) ~= "Instance" then return "-- Invalid argument #1 to 'disassemble' (Instance expected)" end
+      if not isValidScript(scriptPath) then return "-- Server scripts are IMPOSSIBLE to disassemble" end
       local OK, bytecode = pcall(getscriptbytecode, scriptPath)
       if not OK then return `--[[ Failed to get script bytecode:\n\t{bytecode}\n]]` end
       if type(bytecode) ~= "string" then return `--[[ Failed to get script bytecode, string type expected got {type(bytecode)} ]]` end

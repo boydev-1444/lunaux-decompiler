@@ -23,6 +23,7 @@
     #define INVALID_SOCKET_VALUE (-1)
 #endif
 
+
 bool isUrlAvailable(const std::string& ip, int port, int timeout_ms = 2000) 
 {
     std::string clean_ip = ip.substr(7);
@@ -431,13 +432,16 @@ int main(int argc, char *argv[])
             return 1;
         }
         std::string bytecode;
+        // Try to analyze if is base64
         try
         {
+            // Asume the file is base64, try to decode it
             std::string content = readFile(input_file);
             std::string decoded = base64decode(content);
             bytecode = content;
         } catch (const std::exception& e)
         {
+            // If it fails, means is raw bytecode, encode it to base64
             std::string content = readFile(input_file);
             bytecode = base64encode(content);
         }

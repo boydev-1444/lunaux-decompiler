@@ -1,29 +1,17 @@
-local function inRange(v1, v2, v3) --[[ Line: 1 ]]
-	local v4 = false;
-	if v2 <= v1 then
-		v4 = v1 <= v3;
-	end;
-	return v4;
-end;
-local function clamp(v2, v3, v4) --[[ Line: 1 ]]
-	if v2 < v3 then
-		return v3;
-	end;
-	if v4 < v2 then
-		return v4;
-	end;
-	return v2;
-end;
-local function sign(v3) --[[ Line: 1 ]]
-	if v3 > 0 then
-		return 1;
-	end;
-	if v3 < 0 then
-		return -1;
-	end;
-	return 0;
-end;
-print(inRange(5, 1, 10));
-print(inRange(15, 1, 10));
-print(clamp(15, 0, 10));
-print(sign(-7));
+
+local function inRange(p0, p1, p2) --[[ line: 1 ]]
+	return p1 <= p0 and p0 <= p2
+end
+
+local function clamp(value, minValue, maxValue) --[[ line: 1 ]]
+	return if value < minValue then minValue elseif maxValue < value then maxValue else value
+end
+
+local function sign(value) --[[ line: 1 ]]
+	return if value > 0 then 1 elseif value < 0 then -1 else 0
+end
+
+print(inRange(5, 1, 10))
+print(inRange(15, 1, 10))
+print(clamp(15, 0, 10))
+print(sign(-7))

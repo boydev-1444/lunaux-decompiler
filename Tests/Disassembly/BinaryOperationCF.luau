@@ -1,3 +1,4 @@
+
 # Luau version: 11 (0x000000B)
 # Types version: 3 (0x0000003)
 # Magic key: 1 (0x0000001)
@@ -70,7 +71,7 @@
 # BLOCK 9 (B9) | PC 21 -> 24
 [00000] [00021] [0x000000C]	    GETIMPORT [0x40C00000]         A=1   D=13               ; var1 = Coins
 [00001] [00023] [0x0000004]	    LOADN                          A=2   D=1000             ; var2 = 1000
-[00002] [00024] [0x000001F]	    JUMPIFNOTLE [0x0000001]        A=2   D=8                ; if var2 >= var1 then goto [B10] else goto [B11]
+[00002] [00024] [0x000001F]	    JUMPIFNOTLE [0x0000001]        A=2   D=8                ; if var2 > var1 then goto [B10] else goto [B11]
 
 # BLOCK 10 (B10) | PC 26 -> 28
 [00000] [00026] [0x000000C]	    GETIMPORT [0x40E00000]         A=1   D=15               ; var1 = OwnsVIP
@@ -87,7 +88,7 @@
 # BLOCK 11 (B11) | PC 33 -> 36
 [00000] [00033] [0x000000C]	    GETIMPORT [0x41200000]         A=1   D=19               ; var1 = Level
 [00001] [00035] [0x0000004]	    LOADN                          A=2   D=50               ; var2 = 50
-[00002] [00036] [0x000001F]	    JUMPIFNOTLE [0x0000001]        A=2   D=8                ; if var2 >= var1 then goto [B14] else goto [B15]
+[00002] [00036] [0x000001F]	    JUMPIFNOTLE [0x0000001]        A=2   D=8                ; if var2 > var1 then goto [B14] else goto [B15]
 
 # BLOCK 14 (B14) | PC 38 -> 40
 [00000] [00038] [0x000000C]	    GETIMPORT [0x41400000]         A=1   D=21               ; var1 = HasBadge

@@ -1,5 +1,6 @@
-print("Before");
+
+print("Before")
 while condition do
-	print("Body");
-end;
-print("After");
+	print("Body")
+end
+print("After")

@@ -1,3 +1,4 @@
+
 # Luau version: 11 (0x000000B)
 # Types version: 3 (0x0000003)
 # Magic key: 1 (0x0000001)

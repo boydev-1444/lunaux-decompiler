@@ -1,16 +1,13 @@
-local function factorial(v1) --[[ Line: 1 ]]
-	-- upvalues: factorial (read)
-	if v1 <= 1 then
-		return 1;
-	end;
-	return v1 * factorial(v1 - 1);
-end;
-local function fibonacci(v2) --[[ Line: 1 ]]
-	-- upvalues: fibonacci (read)
-	if v2 <= 1 then
-		return v2;
-	end;
-	return fibonacci(v2 - 1) + fibonacci(v2 - 2);
-end;
-print(factorial(6));
-print(fibonacci(8));
+
+local function factorial(p0) --[[ line: 1 ]]
+	-- upvalues: factorial (ref)
+	return if p0 <= 1 then 1 else p0 * factorial(p0 - 1)
+end
+
+local function fibonacci(p1) --[[ line: 1 ]]
+	-- upvalues: fibonacci (ref)
+	return if p1 <= 1 then p1 else fibonacci(p1 - 1) + fibonacci(p1 - 2)
+end
+
+print(factorial(6))
+print(fibonacci(8))

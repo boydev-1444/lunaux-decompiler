@@ -1,3 +1,4 @@
+
 # Luau version: 11 (0x000000B)
 # Types version: 3 (0x0000003)
 # Magic key: 1 (0x0000001)
@@ -20,7 +21,7 @@ local function factorial(var0) --[[ Line: 1, Id: 0 ]]
 
 	# BLOCK 0  [ENTRY] (B0) | PC 0 -> 1
 	[00000] [00000] [0x0000004]	    LOADN                          A=1   D=1                ; var1 = 1
-	[00001] [00001] [0x000001F]	    JUMPIFNOTLE [0x0000001]        A=0   D=3                ; if var0 >= var1 then goto [B1] else goto [B2]
+	[00001] [00001] [0x000001F]	    JUMPIFNOTLE [0x0000001]        A=0   D=3                ; if var0 > var1 then goto [B1] else goto [B2]
 
 	# BLOCK 1 (B1) | PC 3 -> 4
 	[00000] [00003] [0x0000004]	    LOADN                          A=1   D=1                ; var1 = 1
@@ -29,7 +30,7 @@ local function factorial(var0) --[[ Line: 1, Id: 0 ]]
 	# BLOCK 2 (B2) | PC 5 -> 10
 	[00000] [00005] [0x0000009]	    GETUPVAL                       A=2   B=0                ; var2 = up_0
 	[00001] [00006] [0x0000028]	    SUBK                           A=3   B=0   C=0          ; var3 = var0 - 1
-	[00002] [00007] [0x0000057]	    CALLFB [0x0000000]                                      ; var2 = var2(var3)
+	[00002] [00007] [0x0000057]	    CALLFB [0x0000000]             A=2   B=2   C=2          ; var2 = var2(var3)
 	[00003] [00009] [0x0000023]	    MUL                            A=1   B=0   C=2          ; var1 = var0 * var2
 	[00004] [00010] [0x0000016]	    RETURN                         A=1   B=2                ; return var1
 
@@ -44,7 +45,7 @@ local function fibonacci(var0) --[[ Line: 1, Id: 1 ]]
 
 	# BLOCK 0  [ENTRY] (B0) | PC 0 -> 1
 	[00000] [00000] [0x0000004]	    LOADN                          A=1   D=1                ; var1 = 1
-	[00001] [00001] [0x000001F]	    JUMPIFNOTLE [0x0000001]        A=0   D=2                ; if var0 >= var1 then goto [B1] else goto [B2]
+	[00001] [00001] [0x000001F]	    JUMPIFNOTLE [0x0000001]        A=0   D=2                ; if var0 > var1 then goto [B1] else goto [B2]
 
 	# BLOCK 1 (B1) | PC 3 -> 3
 	[00000] [00003] [0x0000016]	    RETURN                         A=0   B=2                ; return var0
@@ -52,10 +53,10 @@ local function fibonacci(var0) --[[ Line: 1, Id: 1 ]]
 	# BLOCK 2 (B2) | PC 4 -> 13
 	[00000] [00004] [0x0000009]	    GETUPVAL                       A=2   B=0                ; var2 = up_0
 	[00001] [00005] [0x0000028]	    SUBK                           A=3   B=0   C=0          ; var3 = var0 - 1
-	[00002] [00006] [0x0000057]	    CALLFB [0x0000000]                                      ; var2 = var2(var3)
+	[00002] [00006] [0x0000057]	    CALLFB [0x0000000]             A=2   B=2   C=2          ; var2 = var2(var3)
 	[00003] [00008] [0x0000009]	    GETUPVAL                       A=3   B=0                ; var3 = up_0
 	[00004] [00009] [0x0000028]	    SUBK                           A=4   B=0   C=1          ; var4 = var0 - 2
-	[00005] [00010] [0x0000057]	    CALLFB [0x0000001]                                      ; var3 = var3(var4)
+	[00005] [00010] [0x0000057]	    CALLFB [0x0000001]             A=3   B=2   C=2          ; var3 = var3(var4)
 	[00006] [00012] [0x0000021]	    ADD                            A=1   B=2   C=3          ; var1 = var2 + var3
 	[00007] [00013] [0x0000016]	    RETURN                         A=1   B=2                ; return var1
 
