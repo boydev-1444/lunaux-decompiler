@@ -1,4 +1,3 @@
-
 print("Hello World!")
 
 for i = 1, 20 do

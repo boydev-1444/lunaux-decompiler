@@ -1,2 +1,1 @@
-
-print(if IsAdmin then if HasKeycard then "ACCESS_GRANTED" elseif IsGuest then "LIMITED_ACCESS" else "NO_KEYCARD" elseif IsBanned then "BANNED" elseif 1000 <= Coins then if OwnsVIP then "VIP_PLAYER" else "RICH_PLAYER" elseif 50 <= Level then if HasBadge then "PRO_PLAYER" else "EXPERIENCED_PLAYER" else "NEW_PLAYER")
+print(if IsAdmin then if HasKeycard then "ACCESS_GRANTED" else if IsGuest then "LIMITED_ACCESS" else "NO_KEYCARD" else if IsBanned then "BANNED" else if 1000 <= Coins then if OwnsVIP then "VIP_PLAYER" else "RICH_PLAYER" else if 50 <= Level then if HasBadge then "PRO_PLAYER" else "EXPERIENCED_PLAYER" else "NEW_PLAYER")

@@ -1,12 +1,10 @@
-
-return function(p0, _) --[[ line: 1 | named "poll" ]]
-	local result, positions
-	local _ = nil
-	local _ = nil
+return function(p0, _) --[[ Line: 1 | Named "poll" ]]
+	local Result = nil
+	local Positions = nil
 	repeat
 		task.wait(1)
-		result = workspace:FindFirstChild("Result")
-		positions = result and result:FindFirstChild("Positions")
-	until positions and positions:FindFirstChildOfClass("CFrameValue") or not (p0 and p0.Active)
-	return result, positions
+		Result = workspace:FindFirstChild("Result")
+		Positions = Result and Result:FindFirstChild("Positions")
+	until Positions and Positions:FindFirstChildOfClass("CFrameValue") or not p0 or not p0.Active
+	return Result, Positions
 end

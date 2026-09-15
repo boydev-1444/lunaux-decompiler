@@ -1,10 +1,9 @@
+local RunService = game:GetService("RunService")
+local _ = RunService:IsClient()
+local _ = RunService:IsServer()
+local v3 = RunService:IsStudio()
 
-local runService = game:GetService("RunService")
-local _ = runService:IsClient()
-local _ = runService:IsServer()
-local v1 = runService:IsStudio()
-
-if runService:IsServer() then
+if RunService:IsServer() then
 	local _ = require(game:GetService("ServerScriptService"))
 end
-print(v1)
+print(v3)

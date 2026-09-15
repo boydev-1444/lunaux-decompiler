@@ -1,4 +1,3 @@
-
 print("Before")
 while condition do
 	print("Body")

@@ -1,7 +1,6 @@
-
 print("Hello World!")
 
-for i, v in pairs({}) do
+for _, _ in pairs({}) do
 	print(...)
 	break
 end
