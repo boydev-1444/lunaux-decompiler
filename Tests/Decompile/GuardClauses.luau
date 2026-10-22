@@ -1,19 +1,22 @@
-local function damage(p2) --[[ Line: 14 ]]
-	if p2 and p2.Health <= 0 and not p2.Dead then
-		p2.Dead = os.clock()
+-- [[ lunaux-decompiler.dev | v1.4.7 | discord.gg/2mJUD4XDDT ]]
+-- [[ Luau version 9 | Types version 3 | took 0.9ms ]]
+
+local function damage(Humanoid) --[[ Line: 14 ]]
+	if Humanoid and Humanoid.Health <= 0 and not Humanoid.Dead then
+		Humanoid.Dead = os.clock()
 	end
-	return p2
+	return Humanoid
 end
 
-print((function(p0, p1) --[[ Line: 1 | Named "cached" ]]
-	if not p0 then
+print((function(Key, NewClockTimes) --[[ Line: 1 | Named "cached" ]]
+	if not Key then
 		return nil
-	elseif p1[p0] and os.clock() < p1[p0] then
-		return p1[p0]
+	elseif NewClockTimes[Key] and os.clock() < NewClockTimes[Key] then
+		return NewClockTimes[Key]
 	else
-		p1[p0] = os.clock() + 1
+		NewClockTimes[Key] = os.clock() + 1
 		
-		return p1[p0]
+		return NewClockTimes[Key]
 	end
 end)({}, {}))
 print(damage({ Health = 0 }))

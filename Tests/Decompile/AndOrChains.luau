@@ -1,12 +1,15 @@
+-- [[ lunaux-decompiler.dev | v1.4.7 | discord.gg/2mJUD4XDDT ]]
+-- [[ Luau version 9 | Types version 3 | took 0.9ms ]]
+
 local function anyTrue(p4, p5, p6) --[[ Line: 5 ]]
 	return p4 or (p5 or p6)
 end
 
 local function mixed(p7: number, p8: number, p9): boolean --[[ Line: 9 ]]
-	return 0 < p7 and p8 < 10 and p9 ~= nil
+	return p7 > 0 and p8 < 10 and p9 ~= nil
 end
 
-local function fallback(p10, p11, p12): string --[[ Line: 14 ]]
+local function fallback(p10, p11, p12) --[[ Line: 14 ]]
 	return p10 or (p11 and typeof(p11) == "table" and p11.value or (p12 or "default"))
 end
 

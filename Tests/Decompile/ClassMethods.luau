@@ -1,16 +1,19 @@
-local ClassMethodsModule = {}
-ClassMethodsModule.__index = ClassMethodsModule
+-- [[ lunaux-decompiler.dev | v1.4.7 | discord.gg/2mJUD4XDDT ]]
+-- [[ Luau version 9 | Types version 3 | took 0.9ms ]]
 
-function ClassMethodsModule.new(p0, p1) --[[ Line: 4 ]]
-	-- upvalues: ClassMethodsModule (copy)
-	local Object = setmetatable({}, ClassMethodsModule)
-	Object.name = p0
-	Object.health = p1
+local Module = {}
+Module.__index = Module
+
+function Module.new(Name, Health) --[[ Line: 4 ]]
+	-- upvalues: Module (copy)
+	local self = setmetatable({}, Module)
+	self.name = Name
+	self.health = Health
 	
-	return Object
+	return self
 end
 
-function ClassMethodsModule:takeDamage(p3) --[[ Line: 11 ]]
+function Module:takeDamage(p3) --[[ Line: 11 ]]
 	self.health -= p3
 	
 	if self.health <= 0 then
@@ -18,11 +21,11 @@ function ClassMethodsModule:takeDamage(p3) --[[ Line: 11 ]]
 	end
 end
 
-function ClassMethodsModule:die() --[[ Line: 18 ]]
+function Module:die() --[[ Line: 18 ]]
 	self.dead = true
 end
 
-function ClassMethodsModule:isAlive(): boolean --[[ Line: 22 ]]
+function Module:isAlive(): boolean --[[ Line: 22 ]]
 	return not self.dead and self.health > 0
 end
 
@@ -31,9 +34,9 @@ local config = {
 		return math.max(p7, math.min(p8, p6))
 	end
 }
-local Goblin = ClassMethodsModule.new("goblin", 10)
+local Goblin = Module.new("goblin", 10)
 Goblin:takeDamage(5)
 print(Goblin:isAlive())
 print(config.clamp(5, 0, 3))
 
-return ClassMethodsModule
+return Module

@@ -1,4 +1,4 @@
-# LunaUX-Decompiler [![Version](https://img.shields.io/badge/Version-V_1.4.3-8A2BE2.svg)](https://lunaux-decompiler.dev/download) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# LunaUX-Decompiler [![Version](https://img.shields.io/badge/Version-V_1.4.7-8A2BE2.svg)](https://lunaux-decompiler.dev/download) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 <p align="center"> <img src="./Assets/Banner.png" width=1000 > </p>
 
 ## > Discord server [here](https://discord.gg/2mJUD4XDDT)
@@ -7,16 +7,15 @@
 
 - Inspirated on Konstant, Oracle and medal, this decompiler was created to bring free decompilation service as medal or other decompilers.
 
-> **Disclaimer:** LunaUX is still in beta, it is not 100% perfect. This decompiler will receive regular updates to fix all those bugs.
+> **Disclaimer:** LunaUX is not 100% perfect. This decompiler will receive regular updates to fix all those bugs.
 
 # Using it
 
-There's no local server to install anymore &mdash; the engine runs at **[lunaux-decompiler.dev](https://lunaux-decompiler.dev)** and everything talks to it directly:
+LunaUX runs online at **[lunaux-decompiler.dev](https://lunaux-decompiler.dev)**, and you can also run it offline on your own machine:
 
 - **[Web demo](https://lunaux-decompiler.dev/demo)** &mdash; drop a `.luauc`/`.bin` file (or paste base64 bytecode) and decompile, disassemble or view the CFG right in the browser.
 - **[Downloads](https://lunaux-decompiler.dev/download)** &mdash; the native desktop CLI, the raw engine library (Windows `.pyd` / Linux `.so`) and a bundled runtime, for people who want it offline or scripted into their own tools.
 - **[Documentation](https://lunaux-decompiler.dev/documentation)** &mdash; the full API reference and every decompile option.
-- This repo's [`Tests/`](./Tests) folder is the same fixed set of Luau bytecode samples used to sanity-check every engine release &mdash; each one's `Binary/`, `Decompile/` and `Disassembly/` output side by side, generated straight from `lunaux-src`'s own binary test corpus.
 
 # API Script
 
@@ -26,7 +25,7 @@ There's no local server to install anymore &mdash; the engine runs at **[lunaux-
 loadstring(game:HttpGet("https://lunaux-decompiler.dev/script"))()
 ```
 
-- A ready-to-run copy of this script also lives at [`script.luau`](./script.luau) in this repo.
+- Clients for Luau, C++, C#, Python and Rust are in [`Scripts/`](./Scripts).
 
 # API Options
 
@@ -48,11 +47,3 @@ Passed as the `options` field on `/api/decompile`. Full descriptions and before/
 | `stringInterpolation` | `true` | Rewrites simple `("%s"):format(x)` calls into backtick string interpolation. |
 | `typeAnnotations` | `true` | Annotates parameters/returns with inferred Luau types where confident. |
 | `inlineTroughBlock` | `false` | Allows expression inlining to cross basic block boundaries. |
-
-# Tests
-
-[`Tests/`](./Tests) mirrors `lunaux-src`'s `BinaryTests/` corpus &mdash; the same 22 Luau bytecode samples used for every release's regression and speed benchmarks:
-
-- `Tests/Binary/*.luauc` &mdash; the raw compiled bytecode.
-- `Tests/Decompile/*.luau` &mdash; that bytecode decompiled with the current engine, default options.
-- `Tests/Disassembly/*.luau` &mdash; the same bytecode disassembled.

